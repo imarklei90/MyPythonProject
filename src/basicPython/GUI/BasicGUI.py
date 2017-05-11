@@ -15,4 +15,3 @@ if __name__ == '__main__':
     contents = wx.TextCtrl(win,pos = (5,35),size = (390,260),style = wx.TE_MULTILINE | wx.HSCROLL)
 
     app.MainLoop()
-
