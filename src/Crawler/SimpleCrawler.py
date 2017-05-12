@@ -1,10 +1,10 @@
 #-*- encoding=UTF-8 -*-
 
-# Test a Simple Crawler
-
-__author__ = 'leiguan'
-
 import urllib2
 
-response = urllib2.urlopen("https://zhuanlan.zhihu.com/p/26799224?group_id=845278956881055744")
-print response.read()
+request = urllib2.Request("http://www.baidaau.com")
+try:
+    response = urllib2.urlopen(request)
+except urllib2.URLError,e: # 加入了URLError
+    print e.reason
+print response.read() # response 对象的read(),可以返回获取到的网页内容
