@@ -7,7 +7,6 @@
 import requests
 from bs4 import BeautifulSoup
 import re
-import traceback
 
 
 def get_stock_html(stock_list_url, code = 'utf-8'):
