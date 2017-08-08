@@ -25,7 +25,7 @@ class NeiHanDuanZiSpider():
         request = urllib2.Request(url, headers=headers)
         response = urllib2.urlopen(request)
         html = response.read()
-        pattern = re.compile('<div\sclass="f18 mb20">(.*?)</div>', re.S)
+        pattern = re.compile(r'<div.*?class="f18 mb20">(.*?)</div>', re.S)
         content_list = pattern.findall(html)
         # for content in content_list:
         #     print content.decode("gbk").encode("utf-8")
