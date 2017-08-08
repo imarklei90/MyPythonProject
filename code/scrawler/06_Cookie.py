@@ -24,4 +24,6 @@ data = urllib.urlencode(data)
 request = urllib2.Request(url, data=data)
 response = opener.open(request)
 
-print response.read()
+# print response.read()
+for item in cookie:
+    print item.name + ":" + item.value
