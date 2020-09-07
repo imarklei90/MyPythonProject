@@ -20,24 +20,24 @@ from bs4 import BeautifulSoup
 
 r = requests.get("http://python123.io/ws/demo.html")
 
-print r.text
+print (r.text)
 # 指定HTML解析器
 soup = BeautifulSoup(r.text, 'html.parser')
 # 格式化HTML代码
-print soup.prettify()
+print (soup.prettify())
 
-print 'BeautifulSoap的属性操作'
+print ('BeautifulSoap的属性操作')
 # BS的属性操作
-print soup.a
-print soup.a.parent.parent.name
+print (soup.a)
+print (soup.a.parent.parent.name)
 
-print soup.a.attrs
-print soup.a.attrs['href']
-print type(soup.attrs)
+print (soup.a.attrs)
+print (soup.a.attrs['href'])
+print (type(soup.attrs))
 
-print soup.a.string
-print soup.p.string
-print type(soup.a.string)
+print (soup.a.string)
+print (soup.p.string)
+print (type(soup.a.string))
 
 # bs4的HTML格式化输出
-print soup.a.prettify()
+print (soup.a.prettify())
